@@ -30,7 +30,7 @@ func (cr *productServiceServer) CreateCategory(ctx context.Context, req *pb.Crea
 	}
 	createdCategory, err := cr.productUseCase.CreateCategory(ctx, category.CategoryName)
 	if err != nil {
-		return &pb.CreateCategoryResponse{Status: http.StatusUnprocessableEntity}, errors.New("failed to create new category")
+		return &pb.CreateCategoryResponse{Status: http.StatusUnprocessableEntity}, errors.New("failed to create new categoryy")
 	}
 	data := &pb.ProductCategoryOutput{
 		Id:           uint32(createdCategory.ID),
